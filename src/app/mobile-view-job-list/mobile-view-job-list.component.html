@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card mt-4">
+    <h5 class="card-header">{{selectedJobDetails?.jobTitle}}</h5>
+    <div class="card-body">
+      <span>{{selectedJobDetails?.jobTitle}}</span><br>
+      <span> Company Name: {{selectedJobDetails?.companyName}}</span> <br>
+      <span> Experience: {{selectedJobDetails?.experience}}</span> <br>
+      <span>Send Resume To: {{selectedJobDetails?.email}}</span> <br>
+      <span>Description:</span>
+      <span [innerHTML]="selectedJobDetails?.jobDescription"></span>
+      <img *ngIf="selectedJobDetails.image" src="{{selectedJobDetails?.image}}" class="job-image-class">
+    </div>
+  </div>
+</div>

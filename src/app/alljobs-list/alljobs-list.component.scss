@@ -1,0 +1,31 @@
+::ng-deep {
+  .card-header {
+  background-color: #7ED8CF !important;
+  color: #ffffff !important;
+
+  }
+}
+
+.des-class {
+  line-height: 16px;
+  height: 32px;
+  overflow: hidden;
+}
+
+
+
+.img-class {
+  height: 300px;
+
+  img {
+  height: 300px;
+
+  }
+}
+
+.alljobs-class {
+  height: 850px;
+  overflow: auto;
+  cursor: pointer;
+}
+
