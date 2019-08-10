@@ -52,10 +52,13 @@ export class AlljobsListComponent implements OnInit {
   }
 
   getAllJobList() {
-    this.common.getAllJobs();
+    // this.common.getAllJobs();
+    this.common.getAllJobs().subscribe(data => {
+         this.jobDetails = data['data'];
+
+    })
     // this.jobsSub =  this.common.getJobUpdatedListener().subscribe(data => {
     //   console.log(data);
-    //   this.jobDetails = data['data'];
     // });
   }
 

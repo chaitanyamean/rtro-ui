@@ -7,8 +7,8 @@ import { Subject } from 'rxjs';
 })
 export class CommonService {
 
-  // url = 'http://localhost:3000/jobRoutes';
-  url = 'https://rtro-application.herokuapp.com/jobRoutes';
+  url = 'http://localhost:3000/jobRoutes';
+  // url = 'https://rtro-application.herokuapp.com/jobRoutes';
   httpOptions: any;
   responseData = new Subject<any>();
 
@@ -47,13 +47,10 @@ export class CommonService {
   }
 
   public getAllJobs() {
-    const response = this.httpClient.get<{error: boolean, message: string, status: number, data: any}>(this.url + '/getAlljobs')
-    .subscribe((jobList) => {
-      this.responseData.next(jobList);
-    });
-    // return response;
-    // this.responseData.next(response);
-    // return this.responseData.asObservable();
+    const response = this.httpClient.get(this.url + '/getAlljobs');
+
+    return response;
+
   }
 
   getJobUpdatedListener() {

@@ -8,6 +8,7 @@ import { AlljobsListComponent } from './alljobs-list/alljobs-list.component';
 import { MobileViewJobListComponent } from './mobile-view-job-list/mobile-view-job-list.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { CareerGuidanceComponent } from './career-guidance/career-guidance.component';
 
 const routes: Routes = [
 
@@ -46,6 +47,10 @@ const routes: Routes = [
     component: AdminDashboardComponent
   },
 
+  {
+    path: 'career-guidance',
+    component: CareerGuidanceComponent
+  }
 ];
 
 @NgModule({
