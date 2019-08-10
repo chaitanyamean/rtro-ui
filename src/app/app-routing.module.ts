@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AlljobsListComponent } from './alljobs-list/alljobs-list.component';
 import { MobileViewJobListComponent } from './mobile-view-job-list/mobile-view-job-list.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 const routes: Routes = [
 
@@ -28,10 +30,22 @@ const routes: Routes = [
     path: 'alljob-list',
     component: AlljobsListComponent
   },
+
   {
     path: 'mobile-view-job-list/:id',
     component: MobileViewJobListComponent
-  }
+  },
+  
+  {
+    path: 'admin-login',
+    component: AdminLoginComponent
+  },
+
+  {
+    path: 'admin-dashboard',
+    component: AdminDashboardComponent
+  },
+
 ];
 
 @NgModule({
