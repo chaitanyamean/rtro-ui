@@ -7,8 +7,8 @@ import { Subject } from 'rxjs';
 })
 export class CommonService {
 
-  url = 'http://localhost:3000/jobRoutes';
-  // url = 'https://rtro-application.herokuapp.com/jobRoutes';
+  // url = 'http://localhost:3000/jobRoutes';
+  url = 'https://rtro-application.herokuapp.com/jobRoutes';
   httpOptions: any;
   responseData = new Subject<any>();
 
