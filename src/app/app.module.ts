@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule, NgbButtonLabel, NgbButtonsModule, NgbCheckBox, NgbRadio, NgbRadioGroup } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { CKEditorModule } from 'ckeditor4-angular';
 import { AlljobsListComponent } from './alljobs-list/alljobs-list.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { MobileViewJobListComponent } from './mobile-view-job-list/mobile-view-job-list.component';
+import { CareerGuidanceComponent } from './career-guidance/career-guidance.component';
 // import { CKEditorModule } from 'ngx-ckeditor';
 
 @NgModule({
@@ -25,7 +27,8 @@ import { MobileViewJobListComponent } from './mobile-view-job-list/mobile-view-j
     RtroDashboardComponent,
     AlljobsListComponent,
     HeaderComponent,
-    MobileViewJobListComponent
+    MobileViewJobListComponent,
+    CareerGuidanceComponent
 
   ],
   imports: [
@@ -35,6 +38,8 @@ import { MobileViewJobListComponent } from './mobile-view-job-list/mobile-view-j
     BrowserAnimationsModule,
     AppRoutingModule,
     CKEditorModule,
+    NgbModule,
+    NgbButtonsModule,
     NgMultiSelectDropDownModule.forRoot()
 
   ],

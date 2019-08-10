@@ -17,4 +17,8 @@ export class HeaderComponent implements OnInit {
     console.log();
     this.route.navigate(['/alljob-list']);
   }
+
+  navigateToCareerGuidance() {
+    this.route.navigate(['/career-guidance']);
+  }
 }
