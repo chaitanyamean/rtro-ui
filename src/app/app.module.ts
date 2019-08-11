@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule, NgbButtonLabel, NgbButtonsModule, NgbCheckBox, NgbRadio, NgbRadioGroup } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -42,11 +42,12 @@ import { CareerGuidanceComponent } from './career-guidance/career-guidance.compo
     AppRoutingModule,
     CKEditorModule,
     NgbModule,
-    NgbButtonsModule,
+    NgbCarouselModule,
     NgMultiSelectDropDownModule.forRoot()
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [CareerGuidanceComponent]
 })
 export class AppModule { }

@@ -6,15 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./career-guidance.component.scss']
 })
 export class CareerGuidanceComponent implements OnInit {
-  public model = {};
+  public images = {};
   constructor() { }
 
   ngOnInit() {
-    this.model = {
-      left: true,
-      middle: false,
-      right: false
-    };
+    this.images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
   }
 
 }
