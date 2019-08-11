@@ -17,6 +17,8 @@ export class RtroDashboardComponent implements OnInit {
   file: any;
   key: string;
   imageData: any;
+  walkInChecked: boolean = false ;
+  walkInDate: Date = new Date();
   jobDetails = {
     experience: 0,
     skillSet: [],
@@ -49,8 +51,7 @@ export class RtroDashboardComponent implements OnInit {
       allowSearchFilter: true,
       enableCheckAll: false
     };
-
-
+    
     this.getAllData();
 
 
