@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
 
-  url = 'http://localhost:3000/jobRoutes';
-  // url = 'https://rtro-application.herokuapp.com/jobRoutes';
+  //url = 'http://localhost:3000/jobRoutes';
+  url = 'https://rtro-application.herokuapp.com/jobRoutes';
   httpOptions: any;
   responseData = new Subject<any>();
 
@@ -65,5 +65,10 @@ export class CommonService {
   public getJobQueryResults(obj) {
     const response = this.httpClient.post(this.url + '/getSearchList', obj);
     return response;
+  }
+
+  public deleteJobList(jobId): Observable<{}>{
+      const response = this.httpClient.delete(this.url + '/' + jobId);
+      return response;
   }
 }

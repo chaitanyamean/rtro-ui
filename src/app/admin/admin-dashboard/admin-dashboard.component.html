@@ -1,1 +1,31 @@
-<p>admin-dashboard works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 alljobs-class">
+        <div class="card mt-4" *ngFor="let item of jobDetails" (click)="onJobList(item)">
+          <h5 class="card-header">{{item.jobTitle}}</h5>
+          <div class="card-body">
+            <span>{{item.jobTitle}}</span><br>
+            <span> Company Name: {{item.companyName}}</span> <br>
+            <span> Experience: {{item.experience}}</span> <br>
+            <span>Send Resume To: {{item.email}}</span> <br>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 mb-3" *ngIf="isJobShow">
+  
+        <div class="card mt-4">
+          <h5 class="card-header">{{selectedJobDetails.jobTitle}}<span style="float: right;"><button class="btn btn-danger btn-sm" (click)="deleteJobList(selectedJobDetails)">Delete</button></span></h5>
+          <div class="card-body">
+            <span>{{selectedJobDetails.jobTitle}}</span><br>
+            <span> Company Name: {{selectedJobDetails.companyName}}</span> <br>
+            <span> Experience: {{selectedJobDetails.experience}}</span> <br>
+            <span>Send Resume To: {{selectedJobDetails.email}}</span> <br>
+            <span>Description:</span>
+            <span [innerHTML]="selectedJobDetails.jobDescription"></span>
+            <img *ngIf="selectedJobDetails.image" src="{{selectedJobDetails?.image}}" class="job-image-class">
+          </div>
+        </div>
+  
+      </div>
+    </div>

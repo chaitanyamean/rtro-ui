@@ -94,23 +94,23 @@
           <span style="margin-left:30px;">
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" class="custom-control-input" id="walkInRadioUnchecked" name="walkInRadio"
-                [(ngModel)]="walkInChecked" [value]="true">
+                [(ngModel)]="jobDetails.walkInChecked" [value]="true">
               <label class="custom-control-label" for="walkInRadioUnchecked">Yes</label>
             </div>
 
             <!-- Default walkInRadioChecked -->
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" class="custom-control-input" id="walkInRadioChecked" name="walkInRadio"
-                [(ngModel)]="walkInChecked" [value]="false">
+                [(ngModel)]="jobDetails.walkInChecked" [value]="false">
               <label class="custom-control-label" for="walkInRadioChecked">No</label>
             </div>
           </span>
 
-          <ng-container *ngIf="walkInChecked">
+          <ng-container *ngIf="jobDetails.walkInChecked">
             <form class="form-inline">
               <div class="form-group">
                 <div class="input-group">
-                  <input class="form-control" placeholder="Select Date of Walk-In" name="dp" [(ngModel)]="walkInDate" ngbDatepicker
+                  <input class="form-control" placeholder="Select Date of Walk-In" name="dp" [(ngModel)]="jobDetails.walkInDate" ngbDatepicker
                     #d="ngbDatepicker">
                   <div class="input-group-append">
                     <button class="btn calendar btn-outline-secondary" (click)="d.toggle()" type="button"></button>

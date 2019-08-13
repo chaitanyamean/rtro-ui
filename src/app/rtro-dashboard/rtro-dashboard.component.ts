@@ -17,8 +17,6 @@ export class RtroDashboardComponent implements OnInit {
   file: any;
   key: string;
   imageData: any;
-  walkInChecked: boolean = false ;
-  walkInDate: Date = new Date();
   jobDetails = {
     experience: 0,
     skillSet: [],
@@ -28,7 +26,9 @@ export class RtroDashboardComponent implements OnInit {
     image: "",
     email: "",
     mobileNumber: null,
-    companyName: ''
+    companyName: '',
+    walkInChecked: false,
+    walkInDate: new Date()
   };
   experience = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   constructor(private common: CommonService, private route: Router) {}
