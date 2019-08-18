@@ -21,6 +21,8 @@ export class AdminDashboardComponent implements OnInit {
   getAllJobList() {
     this.common.getAllJobs().subscribe(data => {
          this.jobDetails = data['data'];
+         console.log(this.jobDetails);
+
 
     });
   }
